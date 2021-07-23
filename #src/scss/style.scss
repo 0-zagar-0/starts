@@ -43,6 +43,7 @@ $md4: 479.98;
 body {
    color: #000000;
    font-size: 14px;
+   font-family: $fontfamily;
    &.lock {
       overflow: hidden;
    }
@@ -54,7 +55,7 @@ body {
 /* !*=======================================
 ?              <ОБОЛОЧКА>                
 *========================================= */
-/* .wrapper {
+.wrapper {
    width: 100%;
    min-height: 100%;
    overflow: hidden;
@@ -65,7 +66,7 @@ body {
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
-} */
+}
 /* !*=======================================
 ?              </ОБОЛОЧКА>                
 *========================================= */
@@ -73,21 +74,26 @@ body {
 ?              <ОСНОВНАЯ СЕТКА>          
 *========================================= */
 .container {
-   max-width: 1170px;
+   max-width: $maxWidthContainer + px;
    margin: 0 auto;
    width: 100%;
 }
-@media (max-width: 1182px) {
+@media (max-width: $md1 + px) {
    .container {
       max-width: 970px;
    }
 }
-@media (max-width: 991.98px) {
+@media (max-width: $md2 + px) {
    .container {
       max-width: 750px;
    }
 }
-@media (max-width: 767.98px) {
+@media (max-width: $md3 + px) {
+   .container {
+      max-width: 460px;
+   }
+}
+@media (max-width: $md4 + px) {
    .container {
       max-width: none;
       padding: 0 10px;
