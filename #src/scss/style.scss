@@ -1,6 +1,15 @@
 /* !* ======================================
 ?              <МИКСИНЫ>                
 *========================================= */
+/* Адаптивное изображение */
+@mixin bgi {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
 
 /* !*=======================================
 ?              </МИКСИНЫ>                
@@ -29,7 +38,7 @@ $fontfamily: "sans-serif";
 $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer + 15;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -67,6 +76,16 @@ body {
    -ms-flex-direction: column;
    flex-direction: column;
 }
+
+//.wrapper {
+//   display: grid;
+//   grid-template-areas:
+//      "header"
+//      "main"
+//      "footer";
+//   grid-template: /* header */ 100px /* main */ 1fr /* footer */ 100px / /* left */ 1fr /* container */ $maxwidth + px /* right */ 1fr;
+//   min-height: 100%;
+//}
 /* !*=======================================
 ?              </ОБОЛОЧКА>                
 *========================================= */
